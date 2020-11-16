@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jinzhu/gorm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jinzhu/inflection" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.14.5/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1jln5PMXAOFeuUx7Fay2fDkUrtF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1451" y="-543" key="SettingsEditor" timestamp="1604388418523">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state x="-1451" y="-543" key="SettingsEditor/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1604388418523" />
+  </component>
+</project>
