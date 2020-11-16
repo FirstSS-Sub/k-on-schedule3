@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import HomePage from "./components/pages/HomePage";
+import Home from "./pages/Home";
 import App from "./App";
 
 const Router: React.FC = () => {
@@ -8,7 +8,7 @@ const Router: React.FC = () => {
         <BrowserRouter>
             <Switch>
                 <Route path={"/app"} component={App} exact />
-                <Route path={"/"} component={HomePage} exact />
+                <Route path={"/"} component={Home} exact />
             </Switch>
         </BrowserRouter>
     );

@@ -150,7 +150,7 @@ export interface GenericTemplateProps {
     title: string;
 }
 
-const GenericTemplate: React.FC<GenericTemplateProps> = ({
+export const GenericTemplate: React.FC<GenericTemplateProps> = ({
                                                              children,
                                                              title,
                                                          }) => {
@@ -191,7 +191,7 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
                             noWrap
                             className={classes.title}
                         >
-                            管理画面
+                            {title}
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -214,7 +214,7 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
                                 <ListItemIcon>
                                     <HomeIcon/>
                                 </ListItemIcon>
-                                <ListItemText primary="トップページ"/>
+                                <ListItemText primary="Home"/>
                             </ListItem>
                         </Link>
                         <Link to="/products" className={classes.link}>
@@ -249,5 +249,3 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
         </ThemeProvider>
     );
 };
-
-export default GenericTemplate;
