@@ -18,7 +18,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    // 以下、手動で追加したもの
+    "esModuleInterop": true
   },
   "include": [
     "src"
