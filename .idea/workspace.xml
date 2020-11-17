@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animel/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/Router.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/actions/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ResponsiveDrawerListItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/WrapMainContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Info.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Settings.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/registerServiceWorker.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/templates/ResponsiveDrawer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/utils/actionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsclient/src/components/ResponsiveDrawerListItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsclient/src/pages/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsclient/src/templates/ResponsiveDrawer.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -25,30 +11,10 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/logo192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/logo512.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/App.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/Router.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/HomePage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/templates/GenericTemplate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/templates/GenericTemplate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/reportWebVitals.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/src/setupTests.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/tsclient/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/animel/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/RouteRelatedBottomNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/RouteRelatedBottomNavigation.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +54,23 @@
       <recent name="$PROJECT_DIR$/client/src" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/animel/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -97,6 +80,22 @@
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
     <state x="-1222" y="-428" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605539424535" />
+    <state width="1878" height="300" key="GridCell.Tab.0.bottom" timestamp="1605598479655">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="300" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605598479655" />
+    <state width="1878" height="300" key="GridCell.Tab.0.center" timestamp="1605598479653">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="300" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605598479653" />
+    <state width="1878" height="300" key="GridCell.Tab.0.left" timestamp="1605598479653">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="300" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605598479653" />
+    <state width="1878" height="300" key="GridCell.Tab.0.right" timestamp="1605598479654">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="300" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605598479654" />
     <state x="-1451" y="-543" key="SettingsEditor" timestamp="1604388418523">
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>

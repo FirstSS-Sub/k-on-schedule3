@@ -8,6 +8,8 @@ import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 // Material-UIアイコン取得
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import GroupIcon from '@material-ui/icons/Group';
 
 // Route関連
 import { Link, withRouter } from 'react-router-dom';
@@ -39,7 +41,9 @@ const styles = theme => ({
 
 class RouteRelatedBottomNavigation extends React.Component {
   buttons_info = [
-    { label: 'トップページ', icon: <HomeIcon />, link_to: '/'},
+    { label: 'Home', icon: <HomeIcon />, link_to: '/'},
+    { label: 'Schedule', icon: <CalendarTodayIcon />, link_to: '/schedule'},
+    { label: 'Group', icon: <GroupIcon />, link_to: '/group'},
     { label: 'Animelとは', icon: <InfoIcon />, link_to: '/info'},
   ];
   

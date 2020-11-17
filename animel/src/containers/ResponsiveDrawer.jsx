@@ -14,8 +14,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 // Material-UIアイコン取得
 import SettingsIcon from '@material-ui/icons/Settings';
-import InfoIcon from '@material-ui/icons/Info';
+// import InfoIcon from '@material-ui/icons/Info';
 import HomeIcon from '@material-ui/icons/Home';
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import GroupIcon from '@material-ui/icons/Group';
+import CreateIcon from '@material-ui/icons/Create';
+import CheckIcon from '@material-ui/icons/Check';
 import ShareIcon from '@material-ui/icons/Share';
 
 
@@ -118,25 +122,41 @@ class ResponsiveDrawer extends React.Component {
       <div>
         <List>
           <ResponsiveDrawerListItem
-            to="/info"
-            onClick={this.closeDrawerNav}
-            icon={<InfoIcon />}
-            text="Animelとは"
-          />
-        </List>
-        <Divider />
-        <List>
-          <ResponsiveDrawerListItem
             to="/"
             onClick={this.closeDrawerNav}
             icon={<HomeIcon />}
-            text="トップページ"
+            text="Home"
+          />
+          <ResponsiveDrawerListItem
+              to="/schedule"
+              onClick={this.closeDrawerNav}
+              icon={<CalendarTodayIcon />}
+              text="Schedule"
+          />
+          <ResponsiveDrawerListItem
+              to="/group"
+              onClick={this.closeDrawerNav}
+              icon={<GroupIcon />}
+              text="Group"
           />
           <ResponsiveDrawerListItem
             to="/settings"
             onClick={this.closeDrawerNav}
             icon={<SettingsIcon />}
-            text="設定"
+            text="Settings"
+          />
+          <Divider />
+          <ResponsiveDrawerListItem
+              to="/register"
+              onClick={this.closeDrawerNav}
+              icon={<CreateIcon />}
+              text="Register"
+          />
+          <ResponsiveDrawerListItem
+              to="/login"
+              onClick={this.closeDrawerNav}
+              icon={<CheckIcon />}
+              text="Login"
           />
         </List>
       </div>
