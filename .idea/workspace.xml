@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -11,10 +12,9 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/animel/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/animel/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/animel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/src/containers/RouteRelatedBottomNavigation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/RouteRelatedBottomNavigation.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +76,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-1201" y="-377" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605603077290">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state x="-1201" y="-377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605603077290" />
     <state x="-1222" y="-428" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605539424535">
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
