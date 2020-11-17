@@ -8,6 +8,9 @@ import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles';
 import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 
+// bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 // Redux関連
 import {applyMiddleware, compose, createStore} from 'redux';
 import {Provider} from 'react-redux';

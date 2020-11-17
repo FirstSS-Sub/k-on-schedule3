@@ -16,6 +16,8 @@ import './App.css';
 
 // Route関連
 import { Route, Switch } from 'react-router-dom';
+import SignUp from "./containers/SignUp";
+import SignIn from "./containers/SignIn";
 
 // 不明なRouteは全てNotFound
 const NotFound = () => {
@@ -34,6 +36,8 @@ class App extends Component {
         <ResponsiveDrawer className="ResponsiveDrawer">
           <Switch>
             <Route exact path="/" component={WrapMainContent(Home)} />
+            <Route exact path="/signup" component={WrapMainContent(SignUp)} />
+            <Route exact path="/signin" component={WrapMainContent(SignIn)} />
             <Route exact path="/info" component={WrapMainContent(Info)}/>
             <Route exact path="/settings" component={WrapMainContent(Settings)}/>
             <Route component={WrapMainContent(NotFound)}/>

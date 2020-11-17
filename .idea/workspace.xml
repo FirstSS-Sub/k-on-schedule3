@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animel/src/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animel/src/Firebase.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animel/src/containers/SignIn.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/animel/src/containers/SignUp.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -12,9 +15,13 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/animel/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/animel/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/animel/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/animel/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/animel/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/ResponsiveDrawer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/animel/src" />
       <recent name="$PROJECT_DIR$/client/src" />
     </key>
   </component>
@@ -104,5 +112,13 @@
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
     <state x="-1451" y="-543" key="SettingsEditor/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1604388418523" />
+    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605604079453">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604079453" />
+    <state x="-1252" y="-472" width="584" height="580" key="find.popup" timestamp="1605604075400">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state x="-1252" y="-472" width="584" height="580" key="find.popup/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604075400" />
   </component>
 </project>

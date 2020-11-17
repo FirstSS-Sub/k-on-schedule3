@@ -147,16 +147,16 @@ class ResponsiveDrawer extends React.Component {
           />
           <Divider />
           <ResponsiveDrawerListItem
-              to="/register"
+              to="/signup"
               onClick={this.closeDrawerNav}
               icon={<CreateIcon />}
-              text="Register"
+              text="Sign Up"
           />
           <ResponsiveDrawerListItem
-              to="/login"
+              to="/signin"
               onClick={this.closeDrawerNav}
               icon={<CheckIcon />}
-              text="Login"
+              text="Sign In"
           />
         </List>
       </div>
