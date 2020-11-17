@@ -91,7 +91,6 @@ class SignUp extends React.Component {
                                 validationSchema={Yup.object().shape({
                                     email: Yup.string().email().required(),
                                     password: Yup.string().required(),
-                                    tel: Yup.string().required(),
                                 })}
                             >
                                 {
@@ -127,21 +126,6 @@ class SignUp extends React.Component {
                                                     {errors.password}
                                                 </FormFeedback>
                                             </FormGroup>
-                                            <FormGroup>
-                                                <Label for="tel">Tel</Label>
-                                                <Input
-                                                    type="tel"
-                                                    name="tel"
-                                                    id="tel"
-                                                    value={values.tel}
-                                                    onChange={handleChange}
-                                                    onBlur={handleBlur}
-                                                    invalid={touched.tel && errors.tel ? true : false}
-                                                />
-                                                <FormFeedback>
-                                                    {errors.tel}
-                                                </FormFeedback>
-                                            </FormGroup>
                                             <div style={{ textAlign: 'center' }}>
                                                 <Button color="success" type="submit" disabled={this.state.loading}>
                                                     <Spinner size="sm" color="light" style={{ marginRight: 5 }} hidden={!this.state.loading} />
@@ -154,7 +138,7 @@ class SignUp extends React.Component {
                             </Formik>
                         </div>
                         <div className="mx-auto" style={{ width: '100%', padding: 20 }}>
-                            <Link to="/signin">ログインはこちら。</Link>
+                            <Link to="/signin">ログインはこちら</Link>
                         </div>
                     </FormControl>
                 </form>

@@ -135,7 +135,7 @@ class SignIn extends React.Component {
                             </Formik>
                         </div>
                         <div className="mx-auto" style={{ width: '100%', padding: 20 }}>
-                            <Link to="/signup">新規登録はこちら。</Link>
+                            <Link to="/signup">新規登録はこちら</Link>
                         </div>
                     </FormControl>
                 </form>
