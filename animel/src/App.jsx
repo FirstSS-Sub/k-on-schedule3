@@ -20,6 +20,7 @@ import SignUp from "./containers/SignUp";
 import SignIn from "./containers/SignIn";
 import Auth from "./Auth";
 import Dummy from "./containers/Dummy";
+import Schedule from "./containers/Schedule";
 
 // 不明なRouteは全てNotFound
 const NotFound = () => {
@@ -44,7 +45,7 @@ class App extends Component {
                     <Route exact path="/settings" component={WrapMainContent(Settings)}/>
                     <Auth>
                         <Switch>
-                            <Route exact path="/schedule" component={WrapMainContent(Dummy)} />
+                            <Route exact path="/schedule" component={WrapMainContent(Schedule)} />
                             <Route exact path="/group" component={WrapMainContent(Dummy)} />
                         </Switch>
                     </Auth>
