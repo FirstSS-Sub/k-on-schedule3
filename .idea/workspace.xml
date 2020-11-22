@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/interfaces/router/middleware.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -11,9 +12,6 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/calendar.go" beforeDir="false" afterPath="$PROJECT_DIR$/server2/calendar.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/token.json" beforeDir="false" afterPath="$PROJECT_DIR$/server2/token.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
