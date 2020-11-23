@@ -29,6 +29,8 @@ class Dummy extends React.Component {
         const { classes } = this.props;
 
         console.log(firebase.auth().currentUser.uid);
+        console.log(process.env.REACT_APP_AIUEO);
+        console.log(process.env.REACT_APP_API_KEY);
 
         return (
             <div className={classes}>

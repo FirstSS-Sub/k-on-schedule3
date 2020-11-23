@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/model"
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/repository"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/model"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/repository"
 	"github.com/jinzhu/gorm"
 )
 
@@ -28,9 +28,9 @@ func (ur *UserRepository) Insert(name string) error {
 	return nil
 }
 
-func (ur *UserRepository) FindById(id uint) (*model.User, error) {
+func (ur *UserRepository) FindByUid(uid string) (*model.User, error) {
 	user := new(model.User)
-	user.ID = id
+	user.UserUID = uid
 
 	if err := ur.DB.First(user).Error; err != nil {
 		return nil, err
@@ -55,9 +55,9 @@ func (ur *UserRepository) Update(user *model.User) error {
 	return nil
 }
 
-func (ur *UserRepository) Delete(id uint) error {
+func (ur *UserRepository) Delete(uid string) error {
 	user := new(model.User)
-	user.ID = id
+	user.UserUID = uid
 
 	if err := ur.DB.Delete(user).Error; err != nil {
 		return err

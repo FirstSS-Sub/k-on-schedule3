@@ -1,15 +1,15 @@
 package repository
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/model"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/model"
 )
 
 type UserRepository interface {
 	Insert(name string) error
-	FindById(id uint) (*model.User, error)
+	FindByUid(uid string) (*model.User, error)
 	SearchSameName(name string) bool
 	Update(user *model.User) error
-	Delete(id uint) error
+	Delete(uid string) error
 	// GetComments(id uint) ([]*domain.Comment, error)
 	// GetGroups(id uint) ([]*domain.Group, error)
 

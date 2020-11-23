@@ -1,8 +1,8 @@
 package infrastructure
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/model"
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/repository"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/model"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/repository"
 	"github.com/jinzhu/gorm"
 )
 
@@ -15,43 +15,67 @@ func NewGroupRepository(db *gorm.DB) repository.GroupRepository {
 	return &GroupRepository{DB: db}
 }
 
-func (ur *GroupRepository) Insert(name string) error {
+func (gr *GroupRepository) Insert(name string) error {
 	// groupという箱の中に、参照したいmodel.Group型の構造体のアドレスを入れる
 	group := new(model.Group)
 	group.Name = name
 
 	// &groupにしてしまうと、groupという箱自体のアドレスになってしまう
-	if err := ur.DB.Create(group).Error; err != nil {
+	if err := gr.DB.Create(group).Error; err != nil {
 		return err
 	}
 
 	return nil
 }
 
-func (ur *GroupRepository) FindById(id uint) (*model.Group, error) {
+func (gr *GroupRepository) FindById(id uint) (*model.Group, error) {
 	group := new(model.Group)
 	group.ID = id
 
-	if err := ur.DB.First(group).Error; err != nil {
+	if err := gr.DB.First(group).Error; err != nil {
 		return nil, err
 	}
 
 	return group, nil
 }
 
-func (ur *GroupRepository) Update(group *model.Group) error {
-	if err := ur.DB.Save(group).Error; err != nil {
+func (gr *GroupRepository) SearchSameName(name string) bool {
+	group := new(model.Group)
+
+	// 同じ名前が既に存在する場合はtrue
+	foundSameName := !gr.DB.Where("name = ?", name).First(group).RecordNotFound()
+	return foundSameName
+}
+
+func (gr *GroupRepository) Update(group *model.Group) error {
+	if err := gr.DB.Save(group).Error; err != nil {
 		return err
 	}
 
 	return nil
 }
 
-func (ur *GroupRepository) Delete(id uint) error {
+func (gr *GroupRepository) AddAssociation(group *model.Group, user *model.User) error {
+	if err := gr.DB.Model(group).Association("Users").Append(user).Error; err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (gr *GroupRepository) DeleteAssociation(group *model.Group, user *model.User) error {
+	if err := gr.DB.Model(group).Association("Users").Delete(user).Error; err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (gr *GroupRepository) Delete(id uint) error {
 	group := new(model.Group)
 	group.ID = id
 
-	if err := ur.DB.Delete(group).Error; err != nil {
+	if err := gr.DB.Delete(group).Error; err != nil {
 		return err
 	}
 

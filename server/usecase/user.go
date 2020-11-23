@@ -1,16 +1,16 @@
 package usecase
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/model"
-	"github.com/FirstSS-Sub/k-on-schedule2/server/domain/repository"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/model"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/domain/repository"
 )
 
 type UserUsecase interface {
 	Create(name string) error
-	FindById(id uint) (*model.User, error)
-	UpdateSchedule(id uint, thu, fri, sat, sun, mon, tue, wed string) error
-	ChangeName(id uint, newName string) (bool, error)
-	Delete(id uint) error
+	FindByUid(uid string) (*model.User, error)
+	UpdateSchedule(uid string, thu, fri, sat, sun, mon, tue, wed string) error
+	ChangeName(uid string, newName string) (bool, error)
+	Delete(uid string) error
 }
 
 type userUsecase struct {
@@ -26,14 +26,14 @@ func (uu *userUsecase) Create(name string) error {
 	return uu.UserRepository.Insert(name)
 }
 
-func (uu *userUsecase) FindById(id uint) (*model.User, error) {
-	return uu.UserRepository.FindById(id)
+func (uu *userUsecase) FindByUid(uid string) (*model.User, error) {
+	return uu.UserRepository.FindByUid(uid)
 }
 
-func (uu *userUsecase) UpdateSchedule(id uint, thu, fri, sat, sun, mon, tue, wed string) error {
+func (uu *userUsecase) UpdateSchedule(uid string, thu, fri, sat, sun, mon, tue, wed string) error {
 	// TODO
 	user := new(model.User)
-	user.ID = id
+	user.UserUID = uid
 	user.Thu = thu
 	user.Fri = fri
 	user.Sat = sat
@@ -45,19 +45,19 @@ func (uu *userUsecase) UpdateSchedule(id uint, thu, fri, sat, sun, mon, tue, wed
 	return uu.UserRepository.Update(user)
 }
 
-func (uu *userUsecase) ChangeName(id uint, newName string) (bool, error) {
+func (uu *userUsecase) ChangeName(uid string, newName string) (bool, error) {
 	// TODO
 	if foundSameName := uu.UserRepository.SearchSameName(newName); foundSameName == true {
 		return true, nil
 	}
 
 	user := new(model.User)
-	user.ID = id
+	user.UserUID = uid
 	user.Name = newName
 
 	return false, uu.UserRepository.Update(user)
 }
 
-func (uu *userUsecase) Delete(id uint) error {
-	return uu.UserRepository.Delete(id)
+func (uu *userUsecase) Delete(uid string) error {
+	return uu.UserRepository.Delete(uid)
 }

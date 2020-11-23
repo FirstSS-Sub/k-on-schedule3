@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/usecase"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/usecase"
 	"github.com/labstack/echo"
 	"net/http"
 )
@@ -11,16 +11,16 @@ type UserHandler struct {
 }
 
 // JSONリクエストを受け取るための構造体一覧
-type RequestCreate struct {
+type RequestUserCreate struct {
 	name string `json:"name"`
 }
 
-type RequestFindById struct {
-	id uint `json:"id"`
+type RequestUserFindByUid struct {
+	uid string `json:"uid"`
 }
 
-type RequestUpdateSchedule struct {
-	id  uint   `json:"id"`
+type RequestUserUpdateSchedule struct {
+	uid string `json:"uid"`
 	thu string `json:"thu"`
 	fri string `json:"fri"`
 	sat string `json:"sat"`
@@ -30,13 +30,13 @@ type RequestUpdateSchedule struct {
 	wed string `json:"wed"`
 }
 
-type RequestChangeName struct {
-	id   uint   `json:"id"`
+type RequestUserChangeName struct {
+	uid  string `json:"uid"`
 	name string `json:"name"`
 }
 
-type RequestDelete struct {
-	id uint `json:"id"`
+type RequestUserDelete struct {
+	uid string `json:"uid"`
 }
 
 func NewUserHandler(userUsecase usecase.UserUsecase) UserHandler {
@@ -45,7 +45,7 @@ func NewUserHandler(userUsecase usecase.UserUsecase) UserHandler {
 
 func (uh *UserHandler) Create() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestCreate)
+		param := new(RequestUserCreate)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
@@ -59,15 +59,15 @@ func (uh *UserHandler) Create() echo.HandlerFunc {
 	}
 }
 
-func (uh *UserHandler) FindById() echo.HandlerFunc {
+func (uh *UserHandler) FindByUid() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestFindById)
+		param := new(RequestUserFindByUid)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
 		}
 
-		user, err := uh.UserUsecase.FindById(param.id)
+		user, err := uh.UserUsecase.FindByUid(param.uid)
 		if err != nil {
 			return err
 		}
@@ -78,13 +78,13 @@ func (uh *UserHandler) FindById() echo.HandlerFunc {
 
 func (uh *UserHandler) UpdateSchedule() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestUpdateSchedule)
+		param := new(RequestUserUpdateSchedule)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
 		}
 
-		if err := uh.UserUsecase.UpdateSchedule(param.id, param.thu, param.fri, param.sat, param.sun, param.mon, param.tue, param.wed); err != nil {
+		if err := uh.UserUsecase.UpdateSchedule(param.uid, param.thu, param.fri, param.sat, param.sun, param.mon, param.tue, param.wed); err != nil {
 			return err
 		}
 
@@ -94,13 +94,13 @@ func (uh *UserHandler) UpdateSchedule() echo.HandlerFunc {
 
 func (uh *UserHandler) ChangeName() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestChangeName)
+		param := new(RequestUserChangeName)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
 		}
 
-		foundSameName, err := uh.UserUsecase.ChangeName(param.id, param.name)
+		foundSameName, err := uh.UserUsecase.ChangeName(param.uid, param.name)
 		if err != nil {
 			return err
 		}
@@ -115,13 +115,13 @@ func (uh *UserHandler) ChangeName() echo.HandlerFunc {
 
 func (uh *UserHandler) Delete() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestDelete)
+		param := new(RequestUserDelete)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
 		}
 
-		if err := uh.UserUsecase.Delete(param.id); err != nil {
+		if err := uh.UserUsecase.Delete(param.uid); err != nil {
 			return err
 		}
 

@@ -15,23 +15,24 @@ import (
 func jwtAuth() echo.MiddlewareFunc {
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
-			// Firebase SDK のセットアップ
-			ctx := context.Background()
+			// contextはリクエストのスコープによって分けたほうが良い（らしい）ので、
+			// firebase.NewApp と app.Auth を分けるついでに全部分けている（ctxをreturnする関数の場合はちゃんと宣言が必要）
 
-			credentials, err := google.CredentialsFromJSON(ctx, []byte(os.Getenv("FIREBASE_SDK_CREDENTIALS")))
+			// Firebase SDK のセットアップ
+			credentials, err := google.CredentialsFromJSON(context.Background(), []byte(os.Getenv("FIREBASE_SDK_CREDENTIALS")))
 			if err != nil {
 				log.Printf("error credentials from json: %v\n", err)
 				return err
 			}
 			opt := option.WithCredentials(credentials)
 			// 型アサーションでecho.Context型をcontext.Context型に変換してNewAppの引数に合わせている
-			app, err := firebase.NewApp(ctx, nil, opt)
+			app, err := firebase.NewApp(context.Background(), nil, opt)
 			if err != nil {
 				log.Printf("error initializing app: %v", err)
 				return err
 			}
 
-			client, err := app.Auth(ctx)
+			client, err := app.Auth(context.Background())
 			if err != nil {
 				log.Printf("error getting Firebase client: %n", err)
 				return err
@@ -41,7 +42,7 @@ func jwtAuth() echo.MiddlewareFunc {
 			authHeader := c.Request().Header.Get("Authorization")
 			idToken := strings.Replace(authHeader, "Bearer ", "", 1)
 
-			_, err = client.VerifyIDToken(ctx, idToken)
+			_, err = client.VerifyIDToken(context.Background(), idToken)
 			if err != nil {
 				log.Printf("error verifying ID token: %v\n", err)
 				c.Response().WriteHeader(http.StatusUnauthorized)

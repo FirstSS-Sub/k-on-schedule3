@@ -4,6 +4,7 @@ import "github.com/jinzhu/gorm"
 
 type Comment struct {
 	gorm.Model
-	UserID  uint
+	UserUID string
+	GroupID uint
 	Content string
 }

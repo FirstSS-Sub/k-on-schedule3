@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/FirstSS-Sub/k-on-schedule2/server/injector"
+	"github.com/FirstSS-Sub/k-on-schedule3/server/injector"
 	"github.com/labstack/echo"
 )
 
@@ -9,15 +9,15 @@ func UserRouting(e *echo.Echo) {
 	// TODO REST API に沿ったpathの指定
 	handler := injector.InjectUserHandler()
 
-	e.Group("/user")
+	g := e.Group("/user")
 
-	e.GET("/", handler.FindById())
+	g.GET("/", handler.FindByUid(), jwtAuth())
 
-	e.POST("/", handler.Create())
+	g.POST("/", handler.Create())
 
-	e.POST("/", handler.UpdateSchedule())
+	g.PUT("/schedule", handler.UpdateSchedule(), jwtAuth())
 
-	e.POST("/", handler.ChangeName())
+	g.PUT("/", handler.ChangeName(), jwtAuth())
 
-	e.POST("/", handler.Delete())
+	g.DELETE("/", handler.Delete(), jwtAuth())
 }

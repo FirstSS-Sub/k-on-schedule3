@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/interfaces/router/middleware.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/injector/group.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/interfaces/handler/group.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/interfaces/router/group.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/usecase/group.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -12,6 +15,21 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/Dummy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/Dummy.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/model/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/model/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/repository/group_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/group_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/repository/user_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/user_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/infrastructure/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/infrastructure/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/infrastructure/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/injector/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/injector/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/router/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/usecase/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,9 +136,15 @@
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
     <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604079453" />
-    <state x="-1252" y="-472" width="584" height="580" key="find.popup" timestamp="1605604075400">
-      <screen x="-1920" y="-722" width="1920" height="1080" />
+    <state x="501" y="208" width="568" height="580" key="find.popup" timestamp="1606154466994">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="-1252" y="-472" width="584" height="580" key="find.popup/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604075400" />
+    <state x="501" y="208" width="568" height="580" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606154466994" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1606157564867">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="-1295" y="-481" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1606033794743" />
+    <state x="469" y="201" width="670" height="564" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1606157564867" />
   </component>
 </project>

@@ -8,14 +8,14 @@ import (
 	"github.com/FirstSS-Sub/k-on-schedule3/server/usecase"
 )
 
-func InjectUserRepository() repository.UserRepository {
-	return infrastructure.NewUserRepository(config.NewDB())
+func InjectGroupRepository() repository.GroupRepository {
+	return infrastructure.NewGroupRepository(config.NewDB())
 }
 
-func InjectUserUsecase() usecase.UserUsecase {
-	return usecase.NewUserUsecase(InjectUserRepository())
+func InjectGroupUsecase() usecase.GroupUsecase {
+	return usecase.NewGroupUsecase(InjectGroupRepository())
 }
 
-func InjectUserHandler() handler.UserHandler {
-	return handler.NewUserHandler(InjectUserUsecase())
+func InjectGroupHandler() handler.GroupHandler {
+	return handler.NewGroupHandler(InjectGroupUsecase())
 }
