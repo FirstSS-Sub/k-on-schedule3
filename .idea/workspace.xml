@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/injector/group.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/interfaces/handler/group.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/interfaces/router/group.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/usecase/group.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -15,21 +11,8 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/src/containers/Dummy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/Dummy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/model/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/comment.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/domain/model/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/group.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/domain/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/repository/group_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/group_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/repository/user_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/user_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/infrastructure/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/comment.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/infrastructure/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/group.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/infrastructure/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/injector/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/injector/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/interfaces/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/interfaces/router/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/interfaces/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/usecase/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -7,5 +7,5 @@ import (
 type Group struct {
 	gorm.Model
 	Name     string
-	Users    []*User   `gorm:"many2many:user_group;"`
+	Users    []*User   `gorm:"many2many:user_group;foreignKey:UserUID;"`
 }

@@ -9,8 +9,8 @@ type User struct {
 	UserUID string
 	Name    string
 	Schedule
-	Comments []Comment `gorm:"foreignKey:UserUID"` // ; はいらない？
-	Groups   []*Group  `gorm:"many2many:user_group;"`
+	Comments []Comment `gorm:"foreignKey:UserUID;references:UserUID;"`
+	Groups   []*Group  `gorm:"many2many:user_group;references:UserUID;"`
 }
 
 type Schedule struct {
