@@ -15,6 +15,8 @@ func UserRouting(e *echo.Echo) {
 
 	g.POST("/", handler.Create())
 
+	g.GET("/schedule", handler.GetSchedule(), jwtAuth())
+
 	g.PUT("/schedule", handler.UpdateSchedule(), jwtAuth())
 
 	g.PUT("/", handler.ChangeName(), jwtAuth())

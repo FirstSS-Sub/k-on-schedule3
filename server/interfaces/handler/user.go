@@ -19,15 +19,19 @@ type RequestUserFindByUid struct {
 	uid string `json:"uid"`
 }
 
+type RequestUserGetSchedule struct {
+	uid string `json:"uid"`
+}
+
 type RequestUserUpdateSchedule struct {
 	uid string `json:"uid"`
-	thu string `json:"thu"`
-	fri string `json:"fri"`
-	sat string `json:"sat"`
-	sun string `json:"sun"`
-	mon string `json:"mon"`
-	tue string `json:"tue"`
-	wed string `json:"wed"`
+	thu []string `json:"thu"`
+	fri []string `json:"fri"`
+	sat []string `json:"sat"`
+	sun []string `json:"sun"`
+	mon []string `json:"mon"`
+	tue []string `json:"tue"`
+	wed []string `json:"wed"`
 }
 
 type RequestUserChangeName struct {
@@ -37,6 +41,21 @@ type RequestUserChangeName struct {
 
 type RequestUserDelete struct {
 	uid string `json:"uid"`
+}
+
+// Response用の構造体
+type ResponseUserGetSchedule struct {
+	week []day `json:"week"`
+}
+
+type day struct {
+	date string `json:"date"`
+	timetable []timetable `json:"timetable"`
+}
+
+type timetable struct {
+	flag bool `json:"flag"`
+	times string `json:"times"`
 }
 
 func NewUserHandler(userUsecase usecase.UserUsecase) UserHandler {
@@ -76,15 +95,32 @@ func (uh *UserHandler) FindByUid() echo.HandlerFunc {
 	}
 }
 
-func (uh *UserHandler) UpdateSchedule() echo.HandlerFunc {
+func (uh *UserHandler) GetSchedule() echo.HandlerFunc {
 	return func(ctx echo.Context) error {
-		param := new(RequestUserUpdateSchedule)
+		param := new(RequestUserGetSchedule)
 
 		if err := ctx.Bind(param); err != nil {
 			return err
 		}
 
-		if err := uh.UserUsecase.UpdateSchedule(param.uid, param.thu, param.fri, param.sat, param.sun, param.mon, param.tue, param.wed); err != nil {
+		schedule, err := uh.UserUsecase.GetSchedule(param.uid)
+		if err != nil {
+			return err
+		}
+
+		return ctx.JSON(http.StatusOK, schedule)
+	}
+}
+
+func (uh *UserHandler) UpdateSchedule() echo.HandlerFunc {
+	return func(ctx echo.Context) error {
+		param := new(usecase.RequestUserUpdateSchedule)
+
+		if err := ctx.Bind(param); err != nil {
+			return err
+		}
+
+		if err := uh.UserUsecase.UpdateSchedule(param); err != nil {
 			return err
 		}
 

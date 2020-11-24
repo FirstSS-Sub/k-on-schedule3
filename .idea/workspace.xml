@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/usecase/comment.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -11,8 +12,16 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/model/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/domain/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/infrastructure/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/usecase/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/calendar.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calendar/calendar.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/credentials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server2/token.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/token.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +42,12 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1jln5PMXAOFeuUx7Fay2fDkUrtF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -52,7 +67,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/client/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +75,8 @@
       <recent name="$PROJECT_DIR$/animel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/calendar" />
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/animel/src" />
       <recent name="$PROJECT_DIR$/client/src" />
@@ -91,6 +108,10 @@
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
     <state x="-1201" y="-377" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605603077290" />
+    <state x="-1222" y="-395" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1606207068213">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
+    </state>
+    <state x="-1222" y="-395" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1606207068213" />
     <state x="-1222" y="-428" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605614566409">
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
@@ -111,18 +132,18 @@
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
     <state width="1878" height="300" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605632925841" />
-    <state x="-1451" y="-543" key="SettingsEditor" timestamp="1604388418523">
+    <state x="-1451" y="-543" key="SettingsEditor" timestamp="1606207070089">
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
-    <state x="-1451" y="-543" key="SettingsEditor/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1604388418523" />
-    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605604079453">
+    <state x="-1451" y="-543" key="SettingsEditor/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1606207070089" />
+    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606202794618">
       <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
-    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604079453" />
-    <state x="501" y="208" width="568" height="580" key="find.popup" timestamp="1606154466994">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="-1148" y="-261" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1606202794618" />
+    <state x="-1252" y="-472" width="584" height="580" key="find.popup" timestamp="1606224465503">
+      <screen x="-1920" y="-722" width="1920" height="1080" />
     </state>
-    <state x="-1252" y="-472" width="584" height="580" key="find.popup/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1605604075400" />
+    <state x="-1252" y="-472" width="584" height="580" key="find.popup/0.0.1440.900/-1920.-722.1920.1080@-1920.-722.1920.1080" timestamp="1606224465503" />
     <state x="501" y="208" width="568" height="580" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1606154466994" />
     <state x="469" y="201" width="670" height="564" key="search.everywhere.popup" timestamp="1606157564867">
       <screen x="0" y="0" width="1440" height="900" />

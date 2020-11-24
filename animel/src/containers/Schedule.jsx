@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 import {Card, Checkbox} from "@material-ui/core";
 import CheckBoxOutlineBlankIcon from "@material-ui/icons/CheckBoxOutlineBlank";
@@ -51,12 +51,49 @@ class Schedule extends React.Component {
         super(props);
 
         this.state = {
+            checkedList: [],
+            cardColorList: [],
             checked: false,
             cardColor: {backgroundColor: "white"},
-            data: []
+            data: {}
         };
 
         this.handleChange = this.handleChange.bind(this);
+    }
+
+    componentWillMount() {
+        let cl = Array(7)
+        let ccl = Array(7)
+
+        cl.fill([false, false, false, false, false, false, false, false])
+        ccl.fill([
+            {backgroundColor: "white"}, {backgroundColor: "white"}, {backgroundColor: "white"}, {backgroundColor: "white"},
+            {backgroundColor: "white"}, {backgroundColor: "white"}, {backgroundColor: "white"}, {backgroundColor: "white"}
+        ])
+
+        const request = axios.create({
+            baseURL: 'https://localhost:5000'
+        })
+        request.get('/user')
+            .then(res => {
+                this.setState({
+                    data: res.data
+                });
+            })
+
+        this.state.data.week.map((day, index1) => {
+            day.timetable.map((tt, index2) => {
+                if (tt.flag === true) {
+                    cl[index1][index2] = true
+                    ccl[index1][index2] = {backgroundColor: "#EAFAF1"}
+                }
+            })
+        })
+
+        this.setState({
+            checkedList: cl,
+            cardColorList: ccl
+        })
     }
 
     handleChange() {
@@ -76,39 +113,59 @@ class Schedule extends React.Component {
     render() {
 
         // Material-ui関連
-        const { classes } = this.props;
+        const {classes} = this.props;
 
         return (
             <div>
                 <h2>Animelについて</h2>
                 <div className={classes.textLeft}>
-
+                    {
+                        // 第二引数が配列のインデックス
+                        this.state.data.week.map((day, index1) => {
+                            day.timetable.map((tt, index2) => {
+                                <Card className={classes.card} elevation={1} style={this.state.cardColor} onClick={this.handleChange}>
+                                    <CardActionArea>
+                                        <div className={classes.textLeft}>{day.date} {tt.times}</div>
+                                        <div className={classes.textRight}>
+                                            <Checkbox
+                                                checked={this.state.checked}
+                                                icon={<CheckBoxOutlineBlankIcon/>}
+                                                checkedIcon={<CheckBoxIcon/>}
+                                            />
+                                        </div>
+                                    </CardActionArea>
+                                </Card>
+                            })
+                        })
+                    }
                     <Card className={classes.root} elevation={1} color={classes.cardColor}>
                         <div className={classes.textLeft}>20:30-22:00</div>
                         <div className={classes.textRight}>
-                            <Switch />
+                            <Switch/>
                         </div>
                     </Card>
-                    <Card className={classes.card} elevation={1} style={ this.state.cardColor } onClick={ this.handleChange }>
+                    <Card className={classes.card} elevation={1} style={this.state.cardColor}
+                          onClick={this.handleChange}>
                         <CardActionArea>
                             <div className={classes.textLeft}>11/11(日) 20:30-22:00</div>
                             <div className={classes.textRight}>
                                 <Checkbox
-                                    checked={ this.state.checked }
-                                    icon={<CheckBoxOutlineBlankIcon />}
-                                    checkedIcon={<CheckBoxIcon />}
+                                    checked={this.state.checked}
+                                    icon={<CheckBoxOutlineBlankIcon/>}
+                                    checkedIcon={<CheckBoxIcon/>}
                                 />
                             </div>
                         </CardActionArea>
                     </Card>
-                    <Card className={classes.card} elevation={1} style={ this.state.cardColor } onClick={ this.handleChange }>
+                    <Card className={classes.card} elevation={1} style={this.state.cardColor}
+                          onClick={this.handleChange}>
                         <CardActionArea>
                             <div className={classes.textLeft}>11/11(日) 20:30-22:00</div>
                             <div className={classes.textRight}>
                                 <Checkbox
-                                    checked={ this.state.checked }
-                                    icon={<CheckBoxOutlineBlankIcon />}
-                                    checkedIcon={<CheckBoxIcon />}
+                                    checked={this.state.checked}
+                                    icon={<CheckBoxOutlineBlankIcon/>}
+                                    checkedIcon={<CheckBoxIcon/>}
                                 />
                             </div>
                         </CardActionArea>
@@ -127,4 +184,4 @@ Schedule.propTypes = {
 
 
 // Material-uiのテーマ設定
-export default withStyles(styles, { withTheme: true })(Schedule);
+export default withStyles(styles, {withTheme: true})(Schedule);

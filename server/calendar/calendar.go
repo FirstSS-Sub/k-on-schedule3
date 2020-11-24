@@ -1,4 +1,4 @@
-package main
+package calendar
 
 import (
 	"encoding/json"
@@ -71,7 +71,7 @@ func saveToken(path string, token *oauth2.Token) {
 	json.NewEncoder(f).Encode(token)
 }
 
-func main() {
+func GetCalendar() ([]string, []int) {
 	b, err := ioutil.ReadFile("credentials.json")
 	if err != nil {
 		log.Fatalf("Unable to read client secret file: %v", err)
@@ -146,4 +146,5 @@ func main() {
 	fmt.Println("week", week)
 	fmt.Println("holidayFlag", holidayFlag)
 	fmt.Println("holidayList", holidayList)
+	return week, holidayFlag
 }

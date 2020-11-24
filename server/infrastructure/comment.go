@@ -15,7 +15,7 @@ func NewCommentRepository(db *gorm.DB) repository.CommentRepository {
 	return &CommentRepository{DB: db}
 }
 
-func (cr *CommentRepository) Insert(userUid string, groupId uint, content string) error {
+func (cr *CommentRepository) Insert(userUid string, groupId uint, content string) (*model.Comment, error) {
 	// commentという箱の中に、参照したいmodel.Comment型の構造体のアドレスを入れる
 	comment := new(model.Comment)
 	comment.UserUID = userUid
@@ -23,11 +23,11 @@ func (cr *CommentRepository) Insert(userUid string, groupId uint, content string
 	comment.Content = content
 
 	// &commentにしてしまうと、commentという箱自体のアドレスになってしまう
-	if err := cr.DB.Create(comment).Error; err != nil {
-		return err
+	if result := cr.DB.Create(comment); result.Error != nil {
+		return nil, result.Error
 	}
 
-	return nil
+	return comment, nil
 }
 
 func (cr *CommentRepository) FindById(id uint) (*model.Comment, error) {
@@ -43,6 +43,14 @@ func (cr *CommentRepository) FindById(id uint) (*model.Comment, error) {
 
 func (cr *CommentRepository) Update(comment *model.Comment) error {
 	if err := cr.DB.Save(comment).Error; err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (cr *CommentRepository) AddAssociation(comment *model.Comment, user *model.User) error {
+	if err := cr.DB.Model(comment).Association("Users").Append(user).Error; err != nil {
 		return err
 	}
 
