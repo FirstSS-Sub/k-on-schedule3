@@ -43,21 +43,6 @@ type RequestUserDelete struct {
 	uid string `json:"uid"`
 }
 
-// Response用の構造体
-type ResponseUserGetSchedule struct {
-	week []day `json:"week"`
-}
-
-type day struct {
-	date string `json:"date"`
-	timetable []timetable `json:"timetable"`
-}
-
-type timetable struct {
-	flag bool `json:"flag"`
-	times string `json:"times"`
-}
-
 func NewUserHandler(userUsecase usecase.UserUsecase) UserHandler {
 	return UserHandler{UserUsecase: userUsecase}
 }

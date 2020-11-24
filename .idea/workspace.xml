@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="244eb916-8550-473f-8201-0dd5149a7d95" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../../../AtCoder/ABC022/a.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/usecase/comment.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../denisenkom/go-mssqldb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../erikstmartin/go-testdb" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../golang-sql/civil" afterDir="false" />
@@ -12,16 +11,9 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/model/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/model/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/domain/repository/comment_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/infrastructure/comment.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/comment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/interfaces/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/handler/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/interfaces/router/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/router/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/usecase/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/calendar.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calendar/calendar.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/credentials.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/credentials.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server2/token.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/token.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/usecase/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/group.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +67,8 @@
       <recent name="$PROJECT_DIR$/animel" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/server/calendar" />
       <recent name="$PROJECT_DIR$/server" />
+      <recent name="$PROJECT_DIR$/server/calendar" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/animel/src" />
       <recent name="$PROJECT_DIR$/client/src" />
