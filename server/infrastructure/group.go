@@ -32,7 +32,7 @@ func (gr *GroupRepository) FindById(id uint) (*model.Group, error) {
 	group := new(model.Group)
 	group.ID = id
 
-	if err := gr.DB.First(group).Error; err != nil {
+	if err := gr.DB.Preload("Users").First(group).Error; err != nil {
 		return nil, err
 	}
 

@@ -32,7 +32,7 @@ func (ur *UserRepository) FindByUid(uid string) (*model.User, error) {
 	user := new(model.User)
 	user.UserUID = uid
 
-	if err := ur.DB.First(user).Error; err != nil {
+	if err := ur.DB.Preload("Schedule").Preload("Comments").Preload("Groups").First(user).Error; err != nil {
 		return nil, err
 	}
 
