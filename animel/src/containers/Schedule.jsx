@@ -74,7 +74,7 @@ class Schedule extends React.Component {
         const request = axios.create({
             baseURL: 'https://localhost:5000'
         })
-        request.get('/user')
+        request.get('/user/schedule')
             .then(res => {
                 this.setState({
                     data: res.data
@@ -121,8 +121,8 @@ class Schedule extends React.Component {
                 <div className={classes.textLeft}>
                     {
                         // 第二引数が配列のインデックス
-                        this.state.data.week.map((day, index1) => {
-                            day.timetable.map((tt, index2) => {
+                        this.state.data.week.map((day) => {
+                            day.timetable.map((tt) => {
                                 <Card className={classes.card} elevation={1} style={this.state.cardColor} onClick={this.handleChange}>
                                     <CardActionArea>
                                         <div className={classes.textLeft}>{day.date} {tt.times}</div>

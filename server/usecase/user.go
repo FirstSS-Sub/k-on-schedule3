@@ -21,22 +21,22 @@ type userUsecase struct {
 }
 
 type RequestUserUpdateSchedule struct {
-	uid  string `json:"uid"`
-	week []day  `json:"week"`
+	Uid  string `json:"uid"`
+	Week []day  `json:"week"`
 }
 
 type ResponseUserGetSchedule struct {
-	week []day `json:"week"`
+	Week []day `json:"week"`
 }
 
 type day struct {
-	date      string      `json:"date"`
-	timetable []timetable `json:"timetable"`
+	Date      string      `json:"date"`
+	Timetable []timetable `json:"timetable"`
 }
 
 type timetable struct {
-	flag  bool   `json:"flag"`
-	times string `json:"times"`
+	Flag  bool   `json:"flag"`
+	Times string `json:"times"`
 }
 
 // コンストラクタ
@@ -67,34 +67,34 @@ func (uu *userUsecase) GetSchedule(uid string) (*ResponseUserGetSchedule, error)
 		for ii := 0; ii < len(weekday.Flags); ii++ {
 			tt := new(timetable)
 			if weekday.Flags[ii:ii+1] == "0" {
-				tt.flag = false
-				d.timetable = append(d.timetable, *tt)
+				tt.Flag = false
+				d.Timetable = append(d.Timetable, *tt)
 			} else {
-				tt.flag = true
-				d.timetable = append(d.timetable, *tt)
+				tt.Flag = true
+				d.Timetable = append(d.Timetable, *tt)
 			}
 		}
-		schedule.week = append(schedule.week, *d)
+		schedule.Week = append(schedule.Week, *d)
 
 		s := strings.Split(weekList[i], "-")
 		// s[0]:2020, s[1]:11, s[2]:24
-		schedule.week[i].date = s[1] + "/" + s[2] + " (" + weekdayList[i] + ")"
+		schedule.Week[i].Date = s[1] + "/" + s[2] + " (" + weekdayList[i] + ")"
 
 		if holidayFlagList[i] == 0 {
-			schedule.week[i].timetable[0].times = "9:00-10:30"
-			schedule.week[i].timetable[1].times = "10:30-12:00"
-			schedule.week[i].timetable[2].times = "12:00-14:00"
-			schedule.week[i].timetable[3].times = "14:00-16:00"
-			schedule.week[i].timetable[4].times = "16:00-17:30"
-			schedule.week[i].timetable[5].times = "17:30-19:00"
-			schedule.week[i].timetable[6].times = "19:00-20:30"
-			schedule.week[i].timetable[7].times = "20:30-22:00"
+			schedule.Week[i].Timetable[0].Times = "9:00-10:30"
+			schedule.Week[i].Timetable[1].Times = "10:30-12:00"
+			schedule.Week[i].Timetable[2].Times = "12:00-14:00"
+			schedule.Week[i].Timetable[3].Times = "14:00-16:00"
+			schedule.Week[i].Timetable[4].Times = "16:00-17:30"
+			schedule.Week[i].Timetable[5].Times = "17:30-19:00"
+			schedule.Week[i].Timetable[6].Times = "19:00-20:30"
+			schedule.Week[i].Timetable[7].Times = "20:30-22:00"
 		} else {
-			schedule.week[i].timetable[0].times = "9:00-11:00"
-			schedule.week[i].timetable[1].times = "11:00-13:00"
-			schedule.week[i].timetable[2].times = "13:00-15:00"
-			schedule.week[i].timetable[3].times = "15:00-17:00"
-			schedule.week[i].timetable[4].times = "17:00-19:00"
+			schedule.Week[i].Timetable[0].Times = "9:00-11:00"
+			schedule.Week[i].Timetable[1].Times = "11:00-13:00"
+			schedule.Week[i].Timetable[2].Times = "13:00-15:00"
+			schedule.Week[i].Timetable[3].Times = "15:00-17:00"
+			schedule.Week[i].Timetable[4].Times = "17:00-19:00"
 		}
 	}
 
@@ -104,12 +104,12 @@ func (uu *userUsecase) GetSchedule(uid string) (*ResponseUserGetSchedule, error)
 func (uu *userUsecase) UpdateSchedule(schedule *RequestUserUpdateSchedule) error {
 	// TODO
 	user := new(model.User)
-	user.UserUID = schedule.uid
+	user.UserUID = schedule.Uid
 
-	for _, weekday := range schedule.week {
+	for _, weekday := range schedule.Week {
 		f := ""
-		for _, tt := range weekday.timetable {
-			if tt.flag == false {
+		for _, tt := range weekday.Timetable {
+			if tt.Flag == false {
 				f += "0"
 			} else {
 				f += "1"

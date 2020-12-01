@@ -12,35 +12,35 @@ type UserHandler struct {
 
 // JSONリクエストを受け取るための構造体一覧
 type RequestUserCreate struct {
-	name string `json:"name"`
+	Name string `json:"name"`
 }
 
 type RequestUserFindByUid struct {
-	uid string `json:"uid"`
+	Uid string `json:"uid"`
 }
 
 type RequestUserGetSchedule struct {
-	uid string `json:"uid"`
+	Uid string `json:"uid"`
 }
 
 type RequestUserUpdateSchedule struct {
-	uid string `json:"uid"`
-	thu []string `json:"thu"`
-	fri []string `json:"fri"`
-	sat []string `json:"sat"`
-	sun []string `json:"sun"`
-	mon []string `json:"mon"`
-	tue []string `json:"tue"`
-	wed []string `json:"wed"`
+	Uid string   `json:"uid"`
+	Thu []string `json:"thu"`
+	Fri []string `json:"fri"`
+	Sat []string `json:"sat"`
+	Sun []string `json:"sun"`
+	Mon []string `json:"mon"`
+	Tue []string `json:"tue"`
+	Wed []string `json:"wed"`
 }
 
 type RequestUserChangeName struct {
-	uid  string `json:"uid"`
-	name string `json:"name"`
+	Uid  string `json:"uid"`
+	Name string `json:"name"`
 }
 
 type RequestUserDelete struct {
-	uid string `json:"uid"`
+	Uid string `json:"uid"`
 }
 
 func NewUserHandler(userUsecase usecase.UserUsecase) UserHandler {
@@ -55,7 +55,7 @@ func (uh *UserHandler) Create() echo.HandlerFunc {
 			return err
 		}
 
-		if err := uh.UserUsecase.Create(param.name); err != nil {
+		if err := uh.UserUsecase.Create(param.Name); err != nil {
 			return err
 		}
 
@@ -71,7 +71,7 @@ func (uh *UserHandler) FindByUid() echo.HandlerFunc {
 			return err
 		}
 
-		user, err := uh.UserUsecase.FindByUid(param.uid)
+		user, err := uh.UserUsecase.FindByUid(param.Uid)
 		if err != nil {
 			return err
 		}
@@ -88,7 +88,7 @@ func (uh *UserHandler) GetSchedule() echo.HandlerFunc {
 			return err
 		}
 
-		schedule, err := uh.UserUsecase.GetSchedule(param.uid)
+		schedule, err := uh.UserUsecase.GetSchedule(param.Uid)
 		if err != nil {
 			return err
 		}
@@ -121,7 +121,7 @@ func (uh *UserHandler) ChangeName() echo.HandlerFunc {
 			return err
 		}
 
-		foundSameName, err := uh.UserUsecase.ChangeName(param.uid, param.name)
+		foundSameName, err := uh.UserUsecase.ChangeName(param.Uid, param.Name)
 		if err != nil {
 			return err
 		}
@@ -142,7 +142,7 @@ func (uh *UserHandler) Delete() echo.HandlerFunc {
 			return err
 		}
 
-		if err := uh.UserUsecase.Delete(param.uid); err != nil {
+		if err := uh.UserUsecase.Delete(param.Uid); err != nil {
 			return err
 		}
 

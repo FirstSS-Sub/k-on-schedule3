@@ -11,7 +11,9 @@
       <change afterPath="$PROJECT_DIR$/../../jinzhu/now" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../lib/pq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/infrastructure/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/infrastructure/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/animel/src/containers/Schedule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interfaces/handler/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/interfaces/handler/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/usecase/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/usecase/user.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
